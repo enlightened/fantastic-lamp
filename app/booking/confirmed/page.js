@@ -1,0 +1,78 @@
+"use client";
+import { useSearchParams, useRouter } from "next/navigation";
+import Header from "../../Header";
+import Footer from "../../Footer";
+import Image from "next/image";
+import styles from "./page.module.css";
+
+export default function BookingConfirmed() {
+  const params = useSearchParams();
+  const router = useRouter();
+
+  const service = params.get("service") || "—";
+  const date = params.get("date") || "—";
+  const time = params.get("time") || "—";
+
+  return (
+    <div className={styles.page}>
+      <Header />
+      <main className={styles.main}>
+        <h1 className={styles.heading}>Booking Confirmed</h1>
+        <div className={styles.heroImgWrap}>
+          <Image
+            src="/confirmed-hero.jpg"
+            alt="Star Wars–inspired confirmation"
+            width={340}
+            height={220}
+            className={styles.heroImg}
+            priority
+          />
+        </div>
+        <div className={styles.confirmText}>
+          Your appointment has been successfully booked! May the Force be with your vehicle.
+        </div>
+        <hr className={styles.hr} />
+        <section className={styles.detailsSection}>
+          <h2 className={styles.detailsHeading}>Appointment Details</h2>
+          <div className={styles.detailsCard}>
+            <div className={styles.label}>
+              {/* Service Icon */}
+              <svg fill="none" stroke="#7ecbff" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+              Service:
+            </div>
+            <div className={styles.value}>{service}</div>
+            <div className={styles.label}>
+              {/* Calendar Icon */}
+              <svg fill="none" stroke="#7ecbff" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="4"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Date:
+            </div>
+            <div className={styles.value}>{date}</div>
+            <div className={styles.label}>
+              {/* Clock Icon */}
+              <svg fill="none" stroke="#7ecbff" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Time:
+            </div>
+            <div className={styles.value}>{time}</div>
+          </div>
+        </section>
+        <div className={styles.actions}>
+          <button
+            className={styles.secondaryBtn}
+            type="button"
+            onClick={() => alert("Feature coming soon!")}
+          >
+            View/Manage Booking
+          </button>
+          <button
+            className={styles.primaryBtn}
+            type="button"
+            onClick={() => router.push("/")}
+          >
+            Return to Homepage
+          </button>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}

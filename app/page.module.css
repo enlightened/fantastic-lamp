@@ -12,77 +12,104 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background: #1c2230;
+  padding: 1.2rem 2.2rem;
+  background: rgba(28, 34, 48, 0.92);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  z-index: 20;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  border-bottom: 1.5px solid #232b3a;
 }
 
 .logoSection {
   display: flex;
   align-items: center;
-  gap: 1rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  text-decoration: none;
 }
 
 .logo {
   border-radius: 50%;
   background: #232b3a;
-  padding: 0.25rem;
+  padding: 0.3rem;
+  box-shadow: 0 2px 8px 0 rgba(126,203,255,0.10);
 }
 
 .businessName {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 800;
   letter-spacing: 0.02em;
   color: #7ecbff;
+  transition: color 0.18s;
+  text-shadow: 0 2px 12px #0004;
+}
+
+.logoLink:hover .businessName {
+  color: #b2e6ff;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.2rem;
 }
 
-.nav a {
+.navLink {
   color: #f4f8ff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.07rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+  position: relative;
 }
 
-.nav a:hover {
+.navLink:hover,
+.navLink:focus {
   color: #7ecbff;
   background: #232b3a;
 }
 
 .ctaNav {
-  background: #7ecbff;
+  background: linear-gradient(90deg, #7ecbff 60%, #4bb6fa 100%);
   color: #181c24 !important;
-  padding: 0.5rem 1.2rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 999px;
-  font-weight: 700;
-  margin-left: 1rem;
-  box-shadow: 0 2px 8px 0 rgba(126,203,255,0.15);
-  transition: background 0.2s, color 0.2s;
+  font-weight: 800;
+  font-size: 1.07rem;
+  margin-left: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(126,203,255,0.18);
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  border: none;
+  outline: none;
+  display: inline-block;
 }
 
-.ctaNav:hover {
-  background: #4bb6fa;
+.ctaNav:hover,
+.ctaNav:focus {
+  background: linear-gradient(90deg, #4bb6fa 60%, #7ecbff 100%);
   color: #fff !important;
+  box-shadow: 0 4px 24px 0 rgba(126,203,255,0.22);
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 380px;
+  min-height: 520px; /* Increase this value as needed */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .heroBg {
@@ -182,6 +209,13 @@
   line-height: 1.5;
 }
 
+.serviceIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
 /* About Us Section */
 .about {
   padding: 3.5rem 2rem 2.5rem 2rem;
@@ -213,6 +247,13 @@
   margin-top: auto;
 }
 
+.footerDivider {
+  border: none;
+  border-top: 1.5px solid #28314a;
+  margin-bottom: 1.2rem;
+  opacity: 0.7;
+}
+
 .footerRow {
   display: flex;
   justify-content: space-between;
@@ -228,14 +269,38 @@
 .footerColRight {
   flex: 1 1 0;
   min-width: 180px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .footerColCenter {
-  text-align: center;
+  justify-content: center;
 }
 
 .footerColRight {
-  text-align: right;
+  justify-content: flex-end;
+}
+
+.footerIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.footerLink {
+  color: #b2c6e0;
+  text-decoration: none;
+  transition: color 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footerLink:hover {
+  color: #7ecbff;
+  text-decoration: underline;
 }
 
 .footerCopyright {
@@ -251,6 +316,19 @@
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem 0.7rem;
+  }
+  .nav {
+    gap: 1.1rem;
+  }
+  .businessName {
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 700px) {
@@ -283,6 +361,6 @@
   .footerColLeft,
   .footerColCenter,
   .footerColRight {
-    text-align: center;
+    justify-content: center;
   }
 }
