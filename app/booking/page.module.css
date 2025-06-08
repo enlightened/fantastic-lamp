@@ -1,0 +1,223 @@
+.page {
+  min-height: 100vh;
+  background: #181c24;
+  color: #f4f8ff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+  flex: 1;
+}
+
+.heading {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #7ecbff;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+.section {
+  margin-bottom: 2.2rem;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7ecbff;
+  margin-bottom: 1.1rem;
+}
+
+.radioCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.radioCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: #232b3a;
+  border: 2px solid #28314a;
+  border-radius: 1rem;
+  padding: 1.1rem 1.2rem;
+  cursor: pointer;
+  transition: border 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.radioCard:hover {
+  border-color: #7ecbff;
+}
+
+.radioCard.selected {
+  border-color: #7ecbff;
+  box-shadow: 0 4px 18px 0 rgba(126,203,255,0.10);
+  background: #202534;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioCircle {
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2.5px solid #7ecbff;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+  background: #181c24;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.radioCard.selected .radioCircle {
+  background: #7ecbff;
+  box-shadow: 0 0 0 3px #232b3a;
+}
+
+.radioLabel {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #f4f8ff;
+  display: block;
+}
+
+.radioSubtext {
+  font-size: 0.97rem;
+  color: #b2c6e0;
+  margin-top: 0.15rem;
+  display: block;
+}
+
+.calendar {
+  background: #232b3a;
+  border-radius: 1rem;
+  padding: 1.2rem 1.1rem 1.5rem 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7ecbff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+.calendarNav {
+  background: none;
+  border: none;
+  color: #7ecbff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.5rem;
+  transition: background 0.15s;
+}
+
+.calendarNav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.calendarDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+}
+
+.calendarDayName {
+  color: #b2c6e0;
+  font-size: 0.97rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.calendarDate {
+  background: #181c24;
+  color: #f4f8ff;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  outline: none;
+}
+
+.calendarDate:hover {
+  background: #28314a;
+}
+
+.selectedDate {
+  background: #7ecbff !important;
+  color: #181c24 !important;
+  font-weight: 700;
+}
+
+.today {
+  border: 2px solid #7ecbff;
+}
+
+.timeSelect {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  border: 2px solid #28314a;
+  background: #232b3a;
+  color: #f4f8ff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  appearance: none;
+  outline: none;
+  transition: border 0.18s;
+}
+
+.timeSelect:focus {
+  border-color: #7ecbff;
+}
+
+.submitBtn {
+  width: 100%;
+  background: #7ecbff;
+  color: #181c24;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 999px;
+  margin-top: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(126,203,255,0.18);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, opacity 0.18s;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+  }
+  .calendar {
+    padding: 0.7rem 0.2rem 1rem 0.2rem;
+    max-width: 100%;
+  }
+}

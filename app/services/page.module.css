@@ -1,0 +1,123 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181c24 60%, #22334d 100%);
+  color: #f4f8ff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesHeader {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.servicesTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #7ecbff;
+  margin-bottom: 0.5rem;
+}
+
+.servicesSubtitle {
+  color: #b2c6e0;
+  font-size: 1.13rem;
+  font-weight: 500;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
+  padding: 3rem 2vw 2rem 2vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #232b3a;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 32px 0 #0007, 0 0 0 2px #7ecbff22;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 8px 40px 0 #7ecbff33, 0 0 0 2.5px #7ecbff77;
+  border-color: #7ecbff;
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #181c24;
+  border-top-left-radius: 1.1rem;
+  border-top-right-radius: 1.1rem;
+  box-shadow: 0 2px 12px #0005;
+}
+
+.cardContent {
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #7ecbff;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.cardDescription {
+  color: #b2c6e0;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.bookButton {
+  display: inline-block;
+  background: linear-gradient(90deg, #7ecbff 60%, #4bb6fa 100%);
+  color: #181c24;
+  font-weight: 800;
+  font-size: 1.07rem;
+  padding: 0.8rem 2.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 16px 0 rgba(126,203,255,0.13);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  border: none;
+  outline: none;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.bookButton:hover,
+.bookButton:focus {
+  background: linear-gradient(90deg, #4bb6fa 60%, #7ecbff 100%);
+  color: #fff;
+  box-shadow: 0 4px 24px 0 rgba(126,203,255,0.22);
+}
+
+@media (max-width: 700px) {
+  .servicesList {
+    grid-template-columns: 1fr;
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+    gap: 1.2rem;
+  }
+  .cardImage {
+    height: 140px;
+  }
+  .cardContent {
+    padding: 1rem 0.7rem 1rem 0.7rem;
+  }
+}

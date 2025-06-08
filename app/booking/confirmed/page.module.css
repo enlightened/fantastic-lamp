@@ -1,0 +1,208 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181c24 60%, #22334d 100%);
+  color: #f4f8ff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 3.5rem 1.2rem 2.5rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #7ecbff;
+  text-align: center;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 4px 24px #000a;
+}
+
+.heroImgWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.2rem 0 2.2rem 0; /* Equal top and bottom margin */
+  width: 100%;
+}
+
+.heroImg {
+  border-radius: 1.5rem;
+  box-shadow: 0 0 32px 8px #7ecbff44, 0 8px 32px 0 #0008;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: cover;
+  border: 2.5px solid #7ecbff33;
+  background: #232b3a;
+}
+
+.confirmText {
+  text-align: center;
+  font-size: 1.22rem;
+  color: #e3e8f0;
+  margin-bottom: 2.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 12px #0006;
+  letter-spacing: 0.01em;
+}
+
+.hr {
+  border: none;
+  border-top: 2px solid #28314a;
+  width: 100%;
+  margin: 1.5rem 0 2.2rem 0;
+  opacity: 0.7;
+}
+
+.detailsSection {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.detailsHeading {
+  color: #7ecbff;
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin-bottom: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.detailsCard {
+  background: rgba(35, 43, 58, 0.98);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px 0 #0007, 0 0 0 2px #7ecbff22;
+  padding: 1.5rem 1.2rem;
+  max-width: 370px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1.1rem 1.2rem;
+  align-items: center;
+}
+
+.label {
+  color: #b2c6e0;
+  font-weight: 700;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.value {
+  color: #f4f8ff;
+  font-weight: 800;
+  text-align: left;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+}
+
+.label svg {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+}
+
+.actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.primaryBtn, .secondaryBtn {
+  font-size: 1.13rem;
+  font-weight: 800;
+  padding: 1rem 2.3rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 16px 0 rgba(126,203,255,0.13);
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #7ecbff 60%, #4bb6fa 100%);
+  color: #181c24;
+}
+
+.primaryBtn:hover {
+  background: linear-gradient(90deg, #4bb6fa 60%, #7ecbff 100%);
+  color: #fff;
+}
+
+.secondaryBtn {
+  background: #232b3a;
+  color: #7ecbff;
+  border: 2px solid #7ecbff;
+}
+
+.secondaryBtn:hover {
+  background: #28314a;
+  color: #fff;
+}
+
+.animatedCheck {
+  display: block;
+  margin: 0 auto;
+  background: none;
+}
+
+.checkCircle {
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  animation: circleDraw 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes circleDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkMark {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: checkDraw 0.5s 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes checkDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+  }
+  .detailsCard {
+    grid-template-columns: 1fr;
+    gap: 0.7rem 0;
+    text-align: left;
+    padding: 1.1rem 0.7rem;
+  }
+  .label {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
