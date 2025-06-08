@@ -19,7 +19,7 @@ export default function Header() {
         </a>
       </div>
       <nav className={styles.nav}>
-        <a href="/#services" className={styles.navLink}>Services</a>
+        <a href="/services" className={styles.navLink}>Services</a>
         <a href="/#about" className={styles.navLink}>About Us</a>
         <a href="/booking" className={styles.ctaNav}>
           Book an Appointment

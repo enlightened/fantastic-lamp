@@ -139,6 +139,12 @@
   letter-spacing: 0.01em;
 }
 
+.ctaHeroWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* optional spacing */
+}
+
 .ctaHero {
   display: inline-block;
   background: #7ecbff;

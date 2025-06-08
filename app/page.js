@@ -142,6 +142,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className={styles.ctaHeroWrapper}>
+          <a href="/services" className={styles.ctaHero}>
+            More Services
+          </a>
+        </div>
+        
       </section>
 
       {/* About Us Section */}
@@ -154,6 +160,20 @@ export default function Home() {
           mechanics is dedicated to ensuring your vehicle receives the best care
           possible.
         </p>
+
+        {/* Google Maps Embed */}
+        <div className={styles.mapContainer}>
+          <iframe
+            title="Lube Skywalker Mechanic Shop Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.635398729047!2d-75.67482692390024!3d45.37635197107263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce060162c03805%3A0x8853cb79ed15f366!2sFalcon%20Ave%2C%20Ottawa%2C%20ON!5e0!3m2!1sen!2sca!4v1749395721511!5m2!1sen!2sca"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
 
       <Footer />
