@@ -19,14 +19,33 @@ export default function BookingConfirmed() {
       <main className={styles.main}>
         <h1 className={styles.heading}>Booking Confirmed</h1>
         <div className={styles.heroImgWrap}>
-          <Image
-            src="/confirmed-hero.jpg"
-            alt="Star Wars–inspired confirmation"
-            width={340}
-            height={220}
-            className={styles.heroImg}
-            priority
-          />
+          {/* Animated Checkmark */}
+          <svg
+            className={styles.animatedCheck}
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
+            fill="none"
+          >
+            <circle
+              className={styles.checkCircle}
+              cx="60"
+              cy="60"
+              r="54"
+              stroke="#7ecbff"
+              strokeWidth="6"
+              fill="#232b3a"
+            />
+            <path
+              className={styles.checkMark}
+              d="M38 64l16 16 28-36"
+              stroke="#7ecbff"
+              strokeWidth="7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+          </svg>
         </div>
         <div className={styles.confirmText}>
           Your appointment has been successfully booked! May the Force be with your vehicle.

@@ -31,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2.2rem;
+  margin: 2.2rem 0 2.2rem 0; /* Equal top and bottom margin */
   width: 100%;
 }
 
@@ -155,6 +155,36 @@
 .secondaryBtn:hover {
   background: #28314a;
   color: #fff;
+}
+
+.animatedCheck {
+  display: block;
+  margin: 0 auto;
+  background: none;
+}
+
+.checkCircle {
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  animation: circleDraw 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes circleDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkMark {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: checkDraw 0.5s 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes checkDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @media (max-width: 600px) {
