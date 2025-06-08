@@ -65,9 +65,13 @@ const SERVICES = [
 export default function ServicesPage() {
   return (
 		<div className={styles.page}>
-			<Header 
-            title="Our Services"
-            subtitle="Explore our range of services designed to keep your vehicle in top condition."/>
+			<Header />
+            <div className={styles.servicesHeader}>
+              <h1 className={styles.servicesTitle}>Our Services</h1>
+              <p className={styles.servicesSubtitle}>
+                Explore our range of services designed to keep your vehicle in top condition.
+              </p>
+            </div>
             <div className={styles.servicesList}>
                 {SERVICES.map((service, idx) => (
                 <div key={idx} className={styles.card}>
